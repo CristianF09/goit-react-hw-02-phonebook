@@ -1,0 +1,32 @@
+.contactList {
+  list-style: none;
+  padding: 0;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5x;
+  border-bottom: 1px solid #ccc;
+}
+
+.contactDetails {
+  flex-grow: 1;
+}
+
+.deleteButton {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+}
+
+.deleteButton:hover {
+  background-color: darkred;
+}

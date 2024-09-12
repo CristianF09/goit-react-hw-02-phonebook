@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  font-size: 20px;
+  color: #010101;
+}
+
+.section {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.section h1,
+.section h2 {
+  text-align: center;
+}
