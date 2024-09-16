@@ -6,15 +6,18 @@ import Filter from './components/Filter';
 import styles from './App.module.css';
 
 const App = () => {
-  const [contacts, setContacts] = useState(() => {
-    // Load contacts from localStorage, or set an empty array if none are found
-    const savedContacts = localStorage.getItem('contacts');
-    return savedContacts ? JSON.parse(savedContacts) : [];
-  });
-
+  const [contacts, setContacts] = useState([]);
   const [filter, setFilter] = useState('');
 
-  // Save contacts to localStorage whenever the contacts state changes
+  // Load contacts from localStorage when the component mounts
+  useEffect(() => {
+    const storedContacts = localStorage.getItem('contacts');
+    if (storedContacts) {
+      setContacts(JSON.parse(storedContacts));
+    }
+  }, []);
+
+  // Update localStorage whenever the contacts state changes
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
