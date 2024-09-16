@@ -9,7 +9,7 @@ const App = () => {
   const [contacts, setContacts] = useState([]);
   const [filter, setFilter] = useState('');
 
-  // Load contacts from localStorage when the component mounts
+  
   useEffect(() => {
     const storedContacts = localStorage.getItem('contacts');
     if (storedContacts) {
@@ -17,7 +17,7 @@ const App = () => {
     }
   }, []);
 
-  // Update localStorage whenever the contacts state changes
+  
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
@@ -57,7 +57,8 @@ const App = () => {
   return (
     <div className={styles.container}>
       <h1>Phonebook</h1>
-      <ContactForm onAddContact={addContact} />
+      {}
+      <ContactForm addContact={addContact} />  
 
       <h2>Contacts</h2>
       <Filter value={filter} onChange={handleFilterChange} />

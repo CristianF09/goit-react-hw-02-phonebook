@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './ContactForm.module.css';
 
-const ContactForm = ({ addContact }) => {
+const ContactForm = ({ addContact }) => {  
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -16,8 +16,8 @@ const ContactForm = ({ addContact }) => {
         number,
         id: window.nanoid() 
       };
-      addContact(newContact);
-      setName('');
+      addContact(newContact);  
+      setName(''); 
       setNumber('');
     }
   };
